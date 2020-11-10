@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Todo App
+{%endblock%}
+
+
+{%block body%} 
+
+        <form class="ui form ui center aligned grid" style='margin-top:30px;' action='/' method='POST'>
+
+        <div class="ui large input">
+            <input placeholder="Enter Todo"  type='text' name='title' id='title' style="width:30%;font-family:monospace;">
+        </div>
+        
+            <input style="font-family:monospace;" class='grey ui button' type='submit' value="Add">
+                       
+        </form>
+    
+
+    {% for post in posts %}
+ 
+       
+        <!-- <ul class=" w3-ul w3-large w3-hoverable w3-content" style="width:30%"> -->
+        
+            <div class="ui center aligned segment" style="margin-left:20%;margin-right:25%;margin-top:35px;margin-bottom:-20px;"><font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                {{post.title}}
+                </font>
+                <a style="margin-left:30px;" href = '/delete/{{post.id}}'> 
+                    <i class='black trash icon' style='color:black;'></i>
+                </a>
+
+            </div>
+           
+ 
+
+  
+        
+
+       
+     
+    {% endfor%}
+
+{%endblock%}
