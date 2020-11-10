@@ -3,5 +3,4 @@
 <img src="todo_in.png"/>
 
 ## This was deployed using <a href="https://dashboard.heroku.com/">Heroku</a>
-
 # Deployed Project <a href="https://todolstapp.herokuapp.com/">To Do List</a>
